@@ -194,6 +194,7 @@ $(document).on("click", "#deletenote", function (e) {
     // Also, remove the values entered in the input and textarea for note entry
     $("#titleinput").val("");
     $("#bodyinput").val("");
+    modal.style.display = "none";
 
 });
 
@@ -224,6 +225,7 @@ $(document).on("click", "#savenote", function () {
     // Also, remove the values entered in the input and textarea for note entry
     $("#titleinput").val("");
     $("#bodyinput").val("");
+    modal.style.display = "none";
 });
 
 

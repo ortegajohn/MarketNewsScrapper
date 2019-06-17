@@ -19,7 +19,7 @@ module.exports = function (app) {
         //element.children[1].children = <div class="title"
         //element.children[1].children[0] = <a "
         //element.children[1].children[1] = <div class="bullets"
-        let set_max_articles = 6
+        let set_max_articles = 20
         if (i < set_max_articles && i != 4) {
           result.title = element.children[1].children[0].children[0].children[0].data;
           result.link = "https://seekingalpha.com" + element.children[1].children[0].children[0].attribs.href;

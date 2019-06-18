@@ -6,14 +6,16 @@ var mongodb = require('mongodb');
 
 module.exports = function (app) {
   // A GET route for scraping the echoJS website
-  app.get("/scrape", function (req, res) {
+    app.get("/scrape", function(req, res) {
     // First, we grab the body of the html with axios
-    axios.get("https://seekingalpha.com/market-news/all").then(function (response) {
+    // axios.get("http://www.echojs.com/").then(function(response) {
+    axios.get("https://seekingalpha.com/market-news/all").then(function (response,err) {
       // Then, we load that into cheerio and save it to $ for a shorthand selector
       var $ = cheerio.load(response.data);
-
+      console.log("$",$)
       // Now, we grab every h2 within an article tag, and do the following:
-      $(".mc").each(function (i, element) {
+      // $("article h2").each(function(i, element) {
+      $(".mc").each(function(i, element) {
         // Save an empty result object
         var result = {};
         //element.children[1].children = <div class="title"
